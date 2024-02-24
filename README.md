@@ -46,7 +46,6 @@ https://github.com/V-m1r/KinesteXAIWebView.git
 1. **Prerequisites**:
     - Ensure you've added the necessary permissions in `Info.plist`.
     - miniOS version - 13.0
-    - preferred ios version - 15.0 for saving camera status for consecutive usages
       
 2. **Launching the view**:
    - To display KinesteX, call `createWebView` in KinesteXAIFramework:
@@ -71,7 +70,7 @@ https://github.com/V-m1r/KinesteXAIWebView.git
                         
                     })
 
-   // OPTIONAL: Display loading screen
+                       // OPTIONAL: Display loading screen
                       .overlay(
                         
                         Group {
@@ -88,8 +87,8 @@ https://github.com/V-m1r/KinesteXAIWebView.git
                         
                         
                     )
-    // Smoothly hide the animation
-   .onChange(of: isLoading) { newValue in
+                    // Smoothly hide the animation
+                   .onChange(of: isLoading) { newValue in
                         if !newValue {
                             withAnimation(.easeInOut(duration: 2.5)) { // Extended duration to 2.5 seconds
                                 showAnimation = false
